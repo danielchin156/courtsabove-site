@@ -1,0 +1,37 @@
+/* Shared styles for every page (generated from the design canvas) */
+html,body{margin:0;background:#16191D}
+a{color:#2F5683}
+a:hover{color:#16191D}
+.navlink:hover{border-bottom-color:#FFFFFF !important;opacity:0.85}
+.flink:hover{opacity:0.7}
+.btn:hover{filter:brightness(0.92)}
+@media (min-width: 1100px){.fq{white-space:nowrap}}
+.card:hover{border-color:#16191D !important}
+input:focus,textarea:focus,select:focus{outline:2px solid #4F79A8;outline-offset:1px}
+.logolink .lw{position:relative;display:block;z-index:1}
+.lf{position:absolute;left:0;right:0;top:0;bottom:0;pointer-events:none;z-index:0;overflow:visible}
+.lf .src{position:absolute;left:50%;top:54%;width:0;height:0;display:block}
+.lf .src span{position:absolute;left:0;top:0;display:block;opacity:0;mix-blend-mode:screen}
+.lf .core{width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:radial-gradient(circle,rgba(255,252,240,.95) 0%,rgba(255,236,200,.55) 18%,rgba(255,214,160,.18) 42%,rgba(255,214,160,0) 70%)}
+.lf .rays{width:120px;height:120px;margin:-60px 0 0 -60px;border-radius:50%;background:repeating-conic-gradient(from 0deg,rgba(255,238,205,.30) 0deg 1.6deg,rgba(255,238,205,0) 3deg 11deg,rgba(255,238,205,.16) 12deg 13deg,rgba(255,238,205,0) 14.5deg 23deg);-webkit-mask:radial-gradient(circle,#000 0%,rgba(0,0,0,.6) 25%,transparent 68%);mask:radial-gradient(circle,#000 0%,rgba(0,0,0,.6) 25%,transparent 68%)}
+.lf .beam{width:200px;height:3px;margin:-1.5px 0 0 -100px;border-radius:2px;background:linear-gradient(90deg,rgba(255,232,195,0),rgba(255,244,225,.75) 50%,rgba(255,232,195,0));transform:rotate(-13deg);filter:blur(.5px)}
+.logolink.shine .core{animation:lfFade 1.6s ease-in-out both}
+.logolink.shine .beam{animation:lfBeam 1.6s ease-in-out both}
+.logolink.shine .rays{animation:lfRays 1.6s ease-in-out both}
+.logolink.shine .logoimg{animation:lfText 1.6s ease-in-out both}
+@keyframes lfFade{0%{opacity:0;transform:scale(.6)}40%{opacity:1;transform:scale(1)}55%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.1)}}
+@keyframes lfBeam{0%{opacity:0;transform:rotate(-13deg) scaleX(.2)}40%{opacity:1;transform:rotate(-13deg) scaleX(1)}55%{opacity:1}100%{opacity:0;transform:rotate(-13deg) scaleX(1.1)}}
+@keyframes lfRays{0%{opacity:0;transform:scale(.7) rotate(0deg)}40%{opacity:1;transform:scale(1) rotate(14deg)}55%{opacity:1}100%{opacity:0;transform:scale(1.08) rotate(36deg)}}
+@keyframes lfText{0%{filter:drop-shadow(0 0 0 rgba(255,226,180,0))}45%{filter:drop-shadow(0 0 5px rgba(255,226,180,.5))}100%{filter:drop-shadow(0 0 0 rgba(255,226,180,0))}}
+@media (hover: none){.lf{display:none}.logolink.shine .logoimg{animation:none}}
+@media (prefers-reduced-motion: reduce){.lf{display:none}.logolink.shine .logoimg{animation:none}}
+
+/* site header */
+.site-header{position:sticky;top:0;z-index:20;margin-bottom:-76px;background:transparent;transition:background-color .3s ease,box-shadow .3s ease}
+.site-header.scrolled{background:rgba(49,86,130,0.8);-webkit-backdrop-filter:blur(16px) saturate(140%);backdrop-filter:blur(16px) saturate(140%);box-shadow:0 1px 0 rgba(255,255,255,0.12),0 6px 24px rgba(10,14,20,0.12)}
+.site-header.menu-open{background:rgba(49,86,130,0.96);-webkit-backdrop-filter:blur(16px) saturate(140%);backdrop-filter:blur(16px) saturate(140%)}
+.menubtn .ic-close{display:none}
+.site-header.menu-open .menubtn .ic-close{display:block}
+.site-header.menu-open .menubtn .ic-open{display:none}
+.skip{position:absolute;left:-9999px;top:0;z-index:50;background:#FFFFFF;color:#16191D;padding:10px 16px;border-radius:0 0 6px 0}
+.skip:focus{left:0}
