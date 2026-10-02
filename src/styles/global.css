@@ -35,3 +35,5 @@ input:focus,textarea:focus,select:focus{outline:2px solid #4F79A8;outline-offset
 .site-header.menu-open .menubtn .ic-open{display:none}
 .skip{position:absolute;left:-9999px;top:0;z-index:50;background:#FFFFFF;color:#16191D;padding:10px 16px;border-radius:0 0 6px 0}
 .skip:focus{left:0}
+.site-header > nav{min-height:76px;box-sizing:border-box}
+   .navlink{line-height:1.4}
